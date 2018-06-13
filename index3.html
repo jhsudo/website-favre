@@ -1,0 +1,106 @@
+---
+title: index
+layout: default
+
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <style>
+        html, body {
+            font-family: 'Space Mono', monospace;
+            background-color: #1b1e29;
+            height: 100%;
+        }
+
+        h1 {
+            color: #f5f5ff;
+            font-family: 'IBM Plex Serif', serif;
+        }
+
+        div.t-box {
+            background: #292E39;
+            transition: all 200ms ease-in;
+            color: #f5f5ff;
+            box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        div.t-box-img2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 90%;
+            background: url("images/screenshot1.jpg") 50% 50% no-repeat padding-box;
+            opacity: 0.3;
+        }
+
+        .row {
+            position: relative;
+        }
+
+        div.top-content {
+            height: 16em;
+        }
+
+        div.bottom-align-text {
+            transition: all 200ms ease-in;
+            background-color: rgba(13, 23, 46, 0.7);
+            height: 3.5em;
+            border-radius: 0 0 4px 4px;
+            color: #dfdfdf;
+        }
+
+        div.t-box:hover {
+            box-shadow: 5px 5px 40px 0 rgba(0, 0, 0, 0.6);
+        }
+
+        div.top-content:hover + div.bottom-align-text, div.bottom-align-text:hover {
+            background-color: rgba(13, 23, 46, 0.9);
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="p-3">
+<h1 class="display-4">Portfolio</h1>
+<div class="container">
+    <div class="row">
+        {% for num in (1..12) %}
+        <div class="col-12 col-md-6 col-lg-4 p-2">
+            <div class="t-box">
+                <div class="t-box-img p-3"></div>
+                <div class="top-content p-3">
+                </div>
+
+                <div class="bottom-align-text p-3">
+                    <div style="float: left; width: 18rem;" class="text-truncate">Under the Hood</div>
+                    <img style="float: right; opacity: 0.8" src="images/github.png" height="24px" width="24px">
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+</body>
+
+</html>
