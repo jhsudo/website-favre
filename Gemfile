@@ -26,6 +26,3 @@ gem 'jekyll-sitemap'
 
 # https://github.com/hendrikschneider/jekyll-analytics
 gem 'jekyll-analytics'
-
-# https://github.com/bwillis/jekyll-github-sample
-gem 'jekyll_github_sample'
