@@ -36,7 +36,7 @@ title: index
             background: #f2f2f2;
             /*background: #203047;*/
             font-family: 'Roboto Slab', sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -116,12 +116,12 @@ title: index
         .post-module .post-content .category {
             /*font-family: 'Roboto Condensed', sans-serif;*/
             position: absolute;
-            top: -41px;
+            top: -44px;
             left: 0;
             background: #3E517A;
             padding: 10px 15px;
             color: #FFFFFF;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 400;
         }
 
@@ -130,7 +130,7 @@ title: index
             margin: 0;
             padding: 0 0 5px;
             color: #333333;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
         }
 
@@ -139,14 +139,14 @@ title: index
             margin: 0;
             padding: 0 0 20px;
             color: #3E517A;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 400;
         }
 
         .post-module .post-content .description {
             display: none;
             color: #666666;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 1.8em;
         }
 
@@ -210,30 +210,28 @@ title: index
     </style>
 </head>
 <!--https://api.github.com/users/patrickfav/repos-->
-<body class="p-3">
+<body class="p-md-3">
 
 <h1 class="display-3">Portfolio</h1>
 
 <div class="container">
     <div class="row">
         {% for num in (1..30) %}
-        <div class="col-12 col-md-6 col-lg-4 p-2">
+        <div class="col-sm-12 col-md-6 col-lg-4 p-2">
             <!-- Normal Demo-->
 
             <!-- Post-->
             <div class="post-module">
                 <!-- Thumbnail-->
-                <a href="{{ site.data.github_repos[num].html_url}}">
-                    <div class="thumbnail">
-                        <div class="date">
-                            <div class="day">27</div>
-                            <div class="month">Mar</div>
-                        </div>
-                        <img src="https://github.com/patrickfav/BlurTestAndroid/raw/master/misc/readme/readme_screen06.png"/>
-                        <!--<img src="https://github.com/patrickfav/under-the-hood/raw/master/doc/screenshot_gallery.png"/>-->
-                        <!--<img src="https://github.com/patrickfav/density-converter/raw/master/src/main/resources/img/screenshot1.jpg"/>-->
+                <div class="thumbnail">
+                    <div class="date">
+                        <div class="day">27</div>
+                        <div class="month">Mar</div>
                     </div>
-                </a>
+                    <img src="https://github.com/patrickfav/BlurTestAndroid/raw/master/misc/readme/readme_screen06.png"/>
+                    <!--<img src="https://github.com/patrickfav/under-the-hood/raw/master/doc/screenshot_gallery.png"/>-->
+                    <!--<img src="https://github.com/patrickfav/density-converter/raw/master/src/main/resources/img/screenshot1.jpg"/>-->
+                </div>
                 <!-- Post Content-->
                 <div class="post-content">
                     <a href="{{ site.data.github_repos[num].html_url}}">
