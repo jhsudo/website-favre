@@ -1,0 +1,274 @@
+---
+title: index
+
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Roboto+Condensed|Roboto+Slab:400,700"
+          rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script>
+        $(window).on("load", function () {
+            $('.post-module').hover(function () {
+                $(this).find('.description').stop().animate({
+                    height: "toggle",
+                    opacity: "toggle"
+                }, 300);
+            });
+        });
+    </script>
+    <style>
+        body {
+            background: #f2f2f2;
+            /*background: #203047;*/
+            font-family: 'Roboto Slab', sans-serif;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .post-module {
+            position: relative;
+            z-index: 1;
+            display: block;
+            background: #FFFFFF;
+            height: 470px;
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s linear 0s;
+        }
+
+        .post-module:hover, .hover {
+            box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.45);
+        }
+
+        .post-module:hover .thumbnail img,
+        .hover .thumbnail img {
+            transform: scale(1.1);
+            opacity: .6;
+        }
+
+        .post-module .thumbnail {
+            background: #000000;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .post-module .thumbnail .date {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1;
+            background: #3E517A;
+            width: 55px;
+            height: 55px;
+            padding: 12.5px 0;
+            border-radius: 100%;
+            color: #FFFFFF;
+            font-weight: 700;
+            text-align: center;
+            box-sizing: border-box;
+            display: none;
+        }
+
+        .post-module .thumbnail .date .day {
+            font-size: 18px;
+        }
+
+        .post-module .thumbnail .date .month {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .post-module .thumbnail img {
+            display: block;
+            width: 120%;
+            position: relative;
+            left: -20%;
+            transition: all 0.3s linear 0s;
+            filter: blur(1px) brightness(0.75) grayscale(0.6);
+        }
+
+        .post-module .post-content {
+            position: absolute;
+            bottom: 0;
+            /*background-image: linear-gradient(180deg, #fdfbfb 0%, #edeff0 100%);*/
+            background: #fff;
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+            transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+        }
+
+        .post-module .post-content .category {
+            /*font-family: 'Roboto Condensed', sans-serif;*/
+            position: absolute;
+            top: -44px;
+            left: 0;
+            background: #3E517A;
+            padding: 10px 15px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .post-module .post-content .title {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0 0 5px;
+            color: #333333;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .post-module .post-content .sub_title {
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0 0 20px;
+            color: #3E517A;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .post-module .post-content .description {
+            display: none;
+            color: #666666;
+            font-size: 16px;
+            line-height: 1.8em;
+        }
+
+        .post-module .post-content .post-meta {
+            margin: 30px 0 0;
+            color: #999999;
+        }
+
+        .post-module .post-content .post-meta .metadata {
+            margin: 0 16px 0 0;
+        }
+
+        .post-module .post-content .post-meta a {
+            transition: color 0.2s ease-in-out 0s;
+            color: #999999;
+            text-decoration: none;
+        }
+
+        .post-module .post-content .post-meta a:hover {
+            color: #000;
+        }
+
+        .post-module a:hover {
+            text-decoration: none;
+        }
+
+        .post-module a:active {
+            text-decoration: underline rgba(0, 0, 0, 0.1);
+        }
+
+        .hover .post-content .description {
+            display: block !important;
+            height: auto !important;
+            opacity: 1 !important;
+        }
+
+        .post-module .post-content .post-meta .tag {
+            font-family: 'Roboto Slab', sans-serif;
+            transition: opacity 0.3s ease-in-out 0s;
+            background: #4a494b;
+            color: #f7f7f8;
+            padding: 0.35em 0.75em;
+            border-radius: 4px;
+            font-size: 0.7em;
+            opacity: 0;
+        }
+
+        .post-module:hover .post-content .post-meta .tag {
+            opacity: 1;
+        }
+
+        .post-module .post-content .post-meta .tag.java {
+            background: #558197;
+            color: #f7f7f8;
+        }
+
+        .post-module .post-content .post-meta .tag.android {
+            background: #A3C54E;
+            color: #f7f7f8;
+        }
+    </style>
+</head>
+<!--https://api.github.com/users/patrickfav/repos-->
+<body class="p-md-3">
+
+<h1 class="display-3">Portfolio</h1>
+
+<div class="container">
+    <div class="row">
+        {% for num in (1..30) %}
+        <div class="col-sm-12 col-md-6 col-lg-4 p-2">
+            <!-- Normal Demo-->
+
+            <!-- Post-->
+            <div class="post-module">
+                <!-- Thumbnail-->
+                <div class="thumbnail">
+                    <div class="date">
+                        <div class="day">27</div>
+                        <div class="month">Mar</div>
+                    </div>
+                    <img src="https://github.com/patrickfav/BlurTestAndroid/raw/master/misc/readme/readme_screen06.png"/>
+                    <!--<img src="https://github.com/patrickfav/under-the-hood/raw/master/doc/screenshot_gallery.png"/>-->
+                    <!--<img src="https://github.com/patrickfav/density-converter/raw/master/src/main/resources/img/screenshot1.jpg"/>-->
+                </div>
+                <!-- Post Content-->
+                <div class="post-content">
+                    <a href="{{ site.data.github_repos[num].html_url}}">
+                        <div class="category"><i class="fab fa-github" style="font-size: 1em"></i>&nbsp;&nbsp;Open
+                            Source
+                        </div>
+                        <h1 class="title">{{ site.data.github_repos[num].name}}</h1>
+                        <h2 class="sub_title">Android debug library</h2>
+                        <p class="description">{{ site.data.github_repos[num].description}}</p>
+                    </a>
+                    <div class="post-meta">
+                        <span class="metadata">
+                            {% if site.data.github_repos[num].stargazers_count > 0 %}
+                                 <a href="{{ site.data.github_repos[num].html_url}}/stargazers"><i
+                                         class="fas fa-star"></i> {{ site.data.github_repos[num].stargazers_count}}</a>
+                            {% endif %}
+                            {% if site.data.github_repos[num].forks_count > 0 %}
+                                 &nbsp;&nbsp;<a href="{{ site.data.github_repos[num].html_url}}/network"><i
+                                class="fas fa-code-branch"></i> {{ site.data.github_repos[num].forks_count}}</a>
+                            {% endif %}
+                        </span>
+                        <span class="comments" style="float: right;">
+                            <span class="tag java"><i class="fab fa-java"></i>&nbsp;&nbsp;Java</span>
+                            <span class="tag android"><i class="fab fa-android"></i>&nbsp;&nbsp;Android</span>
+                            <!--<i class="fab fa-github" style="font-size: 1.5em"></i>-->
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+</body>
+
+</html>
