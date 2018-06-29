@@ -33,6 +33,9 @@ title: index
 
         h1, h2, h3, h4, h4, h6 {
             font-family: 'Raleway', sans-serif;
+        }
+
+        h1.title {
             font-weight: 200;
         }
 
@@ -63,13 +66,13 @@ title: index
 <body>
 
 
-<div class="container p-5">
+<div class="container p-5" style="height: 100vh">
     <div class="row">
         <div class="col-sm-0 col-md-4">
 
         </div>
         <div class="col-sm-12 col-md-8" style="color: #f7f7f8;">
-            <h2 class="display-2" style="font-weight: 200;">Armadillo - Encrypted Shared Preference</h2>
+            <h2 class="display-2 title" style="font-weight: 200;">Armadillo - Encrypted Shared Preference</h2>
 
             <p class="mt-4 lead">
 
@@ -90,10 +93,8 @@ title: index
     </div>
 </div>
 
-<img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/EvVhCC0deijtsl1b4/videoblocks-programming-code-background-abstract-seamless-loop-animation_bklmxmhjw_thumbnail-full01.png" class="img-fluid banner-img" alt="Responsive image" />
+<img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/EvVhCC0deijtsl1b4/videoblocks-programming-code-background-abstract-seamless-loop-animation_bklmxmhjw_thumbnail-full01.png" class="img-fluid banner-img" alt="Responsive image" style="height:100%; padding-bottom: 2em"/>
 
-
-<div style="height: 25em"></div>
 
 {% capture readme %}
 # Armadillo - Encrypted Shared Preference
@@ -360,7 +361,7 @@ limitations under the License.{% endcapture  %}
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-md-8 offset-md-2" style="line-height: 1.9;">
+        <div class="col-sm-12 col-md-10 offset-md-1" style="line-height: 1.9;">
 {{readme | markdownify }}
         </div>
     </div>
